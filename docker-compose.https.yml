@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  app:
+    labels:
+      - "traefik.http.routers.web-share-http.middlewares=redirect-to-https@file"
+      - "traefik.http.routers.web-share-https.tls=true"
+      - "traefik.http.routers.web-share-https.tls.certresolver=${CERT_RESOLVER:-staging-resolver}"
+      - "traefik.http.routers.web-share-https.entrypoints=websecure"
+      - "traefik.http.routers.web-share-https.rule=Host(`${DOMAIN:-web-share.localhost}`)"
