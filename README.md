@@ -3,7 +3,7 @@
 ## Create .env file
 
 ```
-cp .env.sample .env
+cp .env.example .env
 ```
 
 ## HTTP
