@@ -1,5 +1,11 @@
 # Usage
 
+## Create .env file
+
+```
+cp .env.sample .env
+```
+
 ## HTTP
 
 Simply run:
